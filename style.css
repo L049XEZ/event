@@ -1,0 +1,238 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+.custom-navbar {
+    background-color: #123841; /* Background color to match your banner */
+}
+
+.navbar-brand img {
+    height: 60px; /* Adjust the height of your logo */
+}
+
+.navbar-nav {
+    margin-left: auto; /* Push navigation links to the right */
+}
+
+.navbar-nav .nav-link {
+    color: white; /* Make text color white */
+    margin-right: 20px; /* Add space between links */
+}
+.underline {
+    display: inline-block; /* Allows the pseudo-element to be positioned relative to the text */
+    position: relative; /* Positioning context for the pseudo-element */
+}
+
+.underline::after {
+    content: ''; /* Empty content for the pseudo-element */
+    display: block; /* Make it behave like a block element */
+    width: 100%; /* Adjust width to control the underline length */
+    height: 3px; /* Adjust height for underline thickness */
+    background-color: #123841; /* Color of the underline */
+    position: absolute; /* Position it relative to the parent */
+    bottom: 0; /* Align it with the bottom of the parent */
+    left: 0; /* Start at the beginning of the text */
+}
+
+/*Event cards*/
+.event-card {
+    position: relative;
+    transition: transform 0.3s;
+    border-radius: 20px !important; /* Forcefully apply rounded edges */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 20px; /* Added to space out cards if needed */
+}
+
+/* Card title */
+.event-card .card-title {
+    font-family: 'Aptos', sans-serif; /* Correctly specify the font family */
+    font-weight: bold; /* Use font-weight to set bold text */
+    font-size: 1.4rem;
+}
+
+/* Fixed image */
+.fixed-image {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+    border-top-left-radius: 20px; /* Matches card's border-radius */
+    border-top-right-radius: 20px; /* Matches card's border-radius */
+}
+
+/* Fixed card body */
+.fixed-card-body {
+    /* Removed min-height: auto; as it has no effect */
+    border-bottom-left-radius: 20px; /* Matches card's border-radius */
+    border-bottom-right-radius: 20px; /* Matches card's border-radius */
+}
+
+/* Event date */
+.event-date {
+    font-family: 'Aptos', sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    border-right: 2px solid #ddd;
+    display: flex; /* Aligns the content vertically */
+    flex-direction: column;
+    justify-content: center; /* Centers the text vertically */
+    /* Set max-height to prevent overflowing */
+    max-height: 300px; /* Change this value based on the design */
+}
+
+/* Event tags */
+.event-tags .badge {
+    margin-right: 5px;
+}
+
+/* Badge styles */
+.badge.badge-secondary.badge-A {
+    background-color: #123841;
+    color: white; /* Ensures the text is readable */
+}
+
+.badge.badge-warning.badge-B {
+    background-color: #fae571; /* Change background color */
+    color: black; /* Ensures the text is readable */
+}
+
+/* Hover effect for event card */
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+/* See more button */
+.event-card .see-more {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #123841;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2; /* Increase z-index to make sure it is above other elements */
+}
+
+/* Hover effect for see more button */
+.event-card:hover .see-more {
+    display: block;
+    opacity: 1; /* Ensure button stays fully visible */
+}
+
+/* Hover effect for image and card body */
+.event-card:hover .fixed-image,
+.event-card:hover .fixed-card-body {
+    opacity: 0.5; /* Fade only the background and body */
+}
+
+
+/* Custom Pagination Styles */
+.custom-pagination {
+    background-color: #123841 !important;
+    border: none; /* Remove default border */
+    border-radius: 10px !important; /* Rounded corners */
+    padding: 10px 20px; /* Padding for the button */
+    margin: 0 5px; /* Space between buttons */
+    text-align: center; /* Center text */
+    display: inline-block; /* Make the link behave like a button */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.custom-pagination:hover {
+    background-color: #0e2d32; /* Darker shade on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.page-item.disabled .custom-pagination {
+    background-color: #78909c; /* Different color for disabled state */
+    cursor: not-allowed; /* Not-allowed cursor for disabled state */
+}
+.pagination .page-link.custom-pagination {
+    color: white; /* Ensures the text color is white */
+    background-color: #123841; /* Dark green-blue color for background */
+}
+
+ /* Footer styles */
+.footer {
+    background-color: #E2E2E2;
+    color: #183E46;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+   
+}
+
+/* Logo styles */
+.logo-img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Navigation styles */
+.footer-nav h5 {
+    font-weight: bold;
+    text-align: center;
+
+}
+.footer-nav ul li {
+    margin-bottom: 5px;  /* Space between navigation items */
+}
+.footer-nav ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.footer-nav ul li a {
+    color: #183E46;
+    text-decoration: none;  /* No underline */
+    font-size: 15px;  /* Smaller, cleaner font */
+    transition: color 0.3s;  /* Smooth color transition */
+}
+
+.footer-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Social media icons styles */
+.footer-social h5 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer-social .list-inline {
+    padding-left: 0;
+}
+
+.footer-social .list-inline-item {
+    margin-right: 10px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Yellow background styles */
+.yellow-background {
+    background-color: #fbe568;
+    width: 100%; 
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Middle section styles */
+.footer .row.text-center {
+    justify-content: center;
+    align-items: center;
+}
